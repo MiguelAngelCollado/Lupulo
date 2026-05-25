@@ -12,3 +12,10 @@ is.na(Lupulostats)
 #Lo que interesa es la variable Value
 is.na(Lupulostats$Value)
 Lupulostats[!complete.cases(Lupulostats$Value), ]
+
+
+lupulo<-data.frame(Lupulostats$Area, Lupulostats$Item, Lupulostats$Year, Lupulostats$Value, Lupulostats$`Flag Description`)
+head(lupulo)
+names(lupulo)<-c("Country","Crop","Year","Value.t","Description")
+#Value se ide en toneladas, R ha pìllado "t" como "TRUE"
+View(lupulo)
